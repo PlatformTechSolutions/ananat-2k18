@@ -1,0 +1,58 @@
+// Molecules
+//
+// In chemistry, molecules are groups of atoms bonded
+// together that resultantly take on new properties.
+// In interfaces, molecules are relatively simple groups of
+// UI elements functioning together as a unit. For example,
+// a form label, search input, and button can combine them
+// together to create a search form molecule.
+//
+// @source - http://atomicdesign.bradfrost.com/chapter-2/
+
+.img-layer{
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.image-circle {
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0  0 2px grey;
+}
+
+/***************************
+button liquid
+*******************************/
+.regBtn{
+  display: fixed;
+}
+.btn-liquid {
+ display: inline-block;
+ position: relative;
+ width: 240px;
+ height: 60px;
+
+ border-radius: 27px;
+
+ color: #fff;
+ font: 700 14px/60px "Droid Sans", sans-serif;
+ letter-spacing: 0.05em;
+ text-align: center;
+ text-decoration: none;
+ text-transform: uppercase;
+}
+
+.btn-liquid .inner {
+ position: relative;
+
+ z-index: 2;
+}
+
+.btn-liquid canvas {
+ position: absolute;
+ top: -50px;
+ right: -50px;
+ bottom: -50px;
+ left: -50px;
+
+ z-index: 1;
+}

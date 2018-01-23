@@ -1,0 +1,124 @@
+// @source http://smacss.com/book/type-layout
+//
+// Layout Rules
+//
+// Layout styles can also be divided into major and minor styles based on
+// reuse. Major layout styles such as header and footer are traditionally
+// styled using ID selectors but take the time to think about the elements
+// that are common across all components of the page and use class selectors
+// where appropriate.
+
+/***********************
+navbar
+**********************/
+.navbar-fix{
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 100;
+  transform: translateY(-50%);
+}
+.navbar-item{
+
+  list-style: none;
+  margin-bottom: 5px;
+}
+.navbar-link{
+  text-decoration: none;
+  outline: none;
+  display: block;
+  height: 30px;
+  border-radius: 12px 0 0 12px;
+  padding: 2px 50px 2px 35px;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.7;
+  background: linear-gradient(90deg,
+  rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 2.4);
+  position: relative;
+  &:hover{
+    right:-10px;
+    opacity: 1;
+  }
+  &::before{
+    content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #fff;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+  }
+  &::after{
+    content: "";
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: -webkit-radial-gradient(#f2f2f2, #a6a6a6);
+	background: radial-gradient(#f2f2f2, #a6a6a6);
+	box-shadow: inset 0 0 1px #000;
+	position: absolute;
+	top: 6px;
+	left: 6px;
+  }
+  &:active{
+  color: orange;
+	right: -10px;
+	opacity: 1;
+  }
+  &:after{
+    background: radial-gradient(#ffc04d, #b37400);
+  }
+}
+
+/*****************************************
+header
+*************************/
+.main-header{
+  height: 100vh;
+  position: relative;
+  @include background-image("https://media.giphy.com/media/26BRGoqbUQvk8nwTC/giphy.gif");
+}
+
+.logo-tag{
+ text-fill-color: transparent;
+ background:linear-gradient(transparent, transparent),
+             url(path/to/bg/image) repeat;
+ background: linear-gradient(transparent, transparent);
+ background-clip: text;
+  color: red;
+  font-family: 'Monoton', cursive;
+  vertical-align: middle;
+}
+
+.header-quotation{
+  width: 60%;
+  border: 2px solid white;
+  position: absolute;
+  top:50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  text-align: center;
+  @extend .img-layer;
+}
+.logo{
+  text-align: center;
+  height: 100%;
+}
+  .logo-tag{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #logo-quote{
+    padding: 5px;
+    vertical-align: middle;
+  }
+
+/*******************************************
+rotator
+**********************************/

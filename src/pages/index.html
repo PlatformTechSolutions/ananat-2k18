@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% include 'navbar.html' %}
+  <div id="pt-main" class="pt-perspective">
+        <div class="pt-page pt-page-1">
+        <header>
+          <div class="main-header">
+            <div class="header-quotation">
+              <div class="logo-tag">
+                <div class="logo flex-item">
+                  <img class="animated slideInLeft" src="img/logo.png" alt="logo" width="200px"/>
+                </div>
+                <i class="line"></i>
+                <div id="logo-quote" class="flex-item animated slideInRight">
+                  <h6 class="logo-text">PUSSGRC PRESENT'S</h6>
+                  <h1 class="logo-text">ANANT - 2k18</h1>
+                  <h3 class="logo-text">World of fiction</h3>
+                </div>
+              </div>
+              <div class="moto"><h1 id="moto-text"></h1></div>
+              <div class="regBtn">
+                <a href="http://waaark.com" class="btn-liquid">
+                  <span class="inner">Register Now</span>
+                </a>
+              </div>
+              <div id="counter">
+                <p id="demo" style="text-align: center;font-size: 60px;font-family: 'Orbitron';color: white;"></p>
+              </div>
+            </div>
+          </div>
+        </header>
+			</div>
+      <!-- page 2 -->
+
+			<div class="pt-page pt-page-2">
+          {% include 'aboutUs.html' %}
+      </div>
+			<div class="pt-page pt-page-3">
+			    <p>Events </p>
+			</div>
+			<div class="pt-page pt-page-4">
+        social cause
+      </div>
+			<div class="pt-page pt-page-5"><h1><span>A collection of</span><strong>Page 4</strong> Transitions</h1></div>
+      <div class="pt-page pt-page-6"><h1><span>A collection of</span><strong>Page 4</strong> Transitions</h1></div>
+      <div class="pt-page pt-page-7"><h1><span>A collection of</span><strong>Page 4</strong> Transitions</h1></div>
+      <div class="pt-page pt-page-8"><h1><span>A collection of</span><strong>Page 4</strong> Transitions</h1></div>
+      <div class="pt-page pt-page-9">
+          {% include 'contactUs.html' %}
+      </div>
+		</div>
+
+		<div class="pt-message">
+			<p>Your browser does not support CSS animations.</p>
+		</div>
+
+<section class="section-event">
+  <div class="container">
+    <div class="row">
+        <div class="centerObject">
+          <div class="header-quotation">
+            <img src="img/100X100.gif" class="image-circle" alt="center-image" width="300px"/>
+          </div>
+          <div class="centerImage">
+              <div class="ligends1">Technical</div>
+              <div class="ligends2">Litrary</div>
+              <div class="ligends3">Cultural</div>
+              <div class="ligends4">Informal</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+</section>
+      <style>
+          .centerObject{
+            position: relative;
+            width:600px;
+            height: 600px;
+            display: block;
+          }
+          .centerImage{
+            position: absolute;
+          }
+          .ligends1{
+              height: 100px;
+              width: 100px;
+            background-color: blue;
+            top:-200px;
+            text-align: center;
+        /*  }
+          #2{
+            background-color: red;
+          }
+          #3{
+            background-color: pink;
+          }
+          #4{
+            background-color: yellow;
+            bottom: 0;
+            text-align: center;
+          } */
+      </style>
+
+<style>
+.logo-text{
+  margin:0;
+padding: 5px;
+}
+.logo{
+  border-right: 2px solid white;
+  margin: 10px;
+}
+#moto-text{
+  color: white;
+}
+
+
+</style>
+
+    <script>
+
+      </script>
+{% endblock %}
