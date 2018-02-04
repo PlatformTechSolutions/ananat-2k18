@@ -5,27 +5,27 @@
   <div id="pt-main" class="pt-perspective">
         <div class="pt-page pt-page-1">
         <header>
-          <div class="main-header">
+          <div class="main-header" id="home">
             <div class="header-quotation">
               <div class="logo-tag">
                 <div class="logo flex-item">
                   <img class="animated slideInLeft" src="img/logo.png" alt="logo" width="200px"/>
                 </div>
-                <i class="line"></i>
+            <!--    <i class="line"></i> -->
                 <div id="logo-quote" class="flex-item animated slideInRight">
-                  <h6 class="logo-text">PUSSGRC PRESENT'S</h6>
-                  <h1 class="logo-text">ANANT - 2k18</h1>
+                  <h6 class="logo-text2">PUSSGRC PRESENT'S</h6>
+                  <h1 class="logo-text1">ANANT - 2k18</h1>
                   <h3 class="logo-text">World of fiction</h3>
                 </div>
               </div>
               <div class="moto"><h1 id="moto-text"></h1></div>
               <div class="regBtn">
-                <a href="http://waaark.com" class="btn-liquid">
-                  <span class="inner">Register Now</span>
+                <a href="register/register.php" class="btn-liquid" target="_blank">
+                  <span class="inner" style="font-family: 'Macondo', cursive;font-size: 1.8rem;">Register Now</span>
                 </a>
               </div>
               <div id="counter">
-                <p id="demo" style="text-align: center;font-size: 60px;font-family: 'Orbitron';color: white;"></p>
+                <p id="demo"></p>
               </div>
             </div>
           </div>
@@ -37,89 +37,88 @@
           {% include 'aboutUs.html' %}
       </div>
 			<div class="pt-page pt-page-3">
-			    <p>Events </p>
+			   {% include 'events.html' %}
 			</div>
 			<div class="pt-page pt-page-4">
-        social cause
+        {% include 'social-cause.html' %}
       </div>
 			<div class="pt-page pt-page-5"><h1><span>A collection of</span><strong>Page 4</strong> Transitions</h1></div>
-      <div class="pt-page pt-page-6"><h1><span>A collection of</span><strong>Page 4</strong> Transitions</h1></div>
-      <div class="pt-page pt-page-7"><h1><span>A collection of</span><strong>Page 4</strong> Transitions</h1></div>
+      <div class="pt-page pt-page-6">
+
+      </div>
+      <div class="pt-page pt-page-7">
+        {% include 'sponsers.html' %}
+      </div>
       <div class="pt-page pt-page-8"><h1><span>A collection of</span><strong>Page 4</strong> Transitions</h1></div>
       <div class="pt-page pt-page-9">
           {% include 'contactUs.html' %}
       </div>
+      <div class="pt-page pt-page-11">
+          {% include 'event-page/web-hackathon.html' %}
+      </div>
+      <div class="pt-page pt-page-12">
+            {% include 'event-page/Techquila.html' %}
+      </div>
+      <div class="pt-page pt-page-13">
+            {% include 'event-page/dazzle-coding.html' %}
+      </div>
+      <div class="pt-page pt-page-14">
+            {% include 'event-page/Techquila.html' %}
+      </div>
+      <div class="pt-page pt-page-15">
+            {% include 'event-page/Techquila.html' %}
+      </div>
+      <div class="pt-page pt-page-16">
+            {% include 'event-page/Techquila.html' %}
+      </div>
+      <div class="pt-page pt-page-17">
+            {% include 'event-page/Techquila.html' %}
+      </div>
+      <div class="pt-page pt-page-18">
+            {% include 'event-page/Techquila.html' %}
+      </div>
+      <div class="pt-page pt-page-19">
+            {% include 'event-page/dust_racer.html' %}
+      </div>
+      <div class="pt-page pt-page-21">
+            {% include 'event-page/hydro.html' %}
+      </div>
+      <div class="pt-page pt-page-22">
+          {% include 'event-page/nukkad_natak.html' %}
+      </div>
+      <div class="pt-page pt-page-23">
+          {% include 'event-page/foot_freakers.html' %}
+      </div>
+      <div class="pt-page pt-page-24">
+          {% include 'event-page/strings.html' %}
+      </div>
+      <div class="pt-page pt-page-25">
+          {% include 'event-page/lose_yourself.html' %}
+      </div>
+      <div class="pt-page pt-page-26">
+          {% include 'event-page/spotlight.html' %}
+      </div>
+      <div class="pt-page pt-page-27">
+          {% include 'event-page/unplugged.html' %}
+      </div>
+      <div class="pt-page pt-page-28">
+          {% include 'event-page/virsa.html' %}
+      </div>
+      <div class="pt-page pt-page-29">
+          {% include 'event-page/paricharcha.html' %}
+      </div>
+      <div class="pt-page pt-page-31">
+          {% include 'event-page/english-debate.html' %}
+      </div>
+      <div class="pt-page pt-page-32">
+          {% include 'event-page/pen.html' %}
+      </div>
+      <div class="pt-page pt-page-33">
+          {% include 'event-page/mock_parliament.html' %}
+      </div>
 		</div>
 
-		<div class="pt-message">
+	<!--	<div class="pt-message">
 			<p>Your browser does not support CSS animations.</p>
-		</div>
-
-<section class="section-event">
-  <div class="container">
-    <div class="row">
-        <div class="centerObject">
-          <div class="header-quotation">
-            <img src="img/100X100.gif" class="image-circle" alt="center-image" width="300px"/>
-          </div>
-          <div class="centerImage">
-              <div class="ligends1">Technical</div>
-              <div class="ligends2">Litrary</div>
-              <div class="ligends3">Cultural</div>
-              <div class="ligends4">Informal</div>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-</section>
-      <style>
-          .centerObject{
-            position: relative;
-            width:600px;
-            height: 600px;
-            display: block;
-          }
-          .centerImage{
-            position: absolute;
-          }
-          .ligends1{
-              height: 100px;
-              width: 100px;
-            background-color: blue;
-            top:-200px;
-            text-align: center;
-        /*  }
-          #2{
-            background-color: red;
-          }
-          #3{
-            background-color: pink;
-          }
-          #4{
-            background-color: yellow;
-            bottom: 0;
-            text-align: center;
-          } */
-      </style>
-
-<style>
-.logo-text{
-  margin:0;
-padding: 5px;
-}
-.logo{
-  border-right: 2px solid white;
-  margin: 10px;
-}
-#moto-text{
-  color: white;
-}
-
-
-</style>
-
-    <script>
-
-      </script>
+		</div>  -->
 {% endblock %}

@@ -215,7 +215,7 @@ gulp.task('nunjucks', function() {
 
 gulp.task('watch', function() {
   gulp.watch(bases.app + 'scss/**/*.scss', ['styles']);
-  gulp.watch(bases.app + 'pages/**/*.+(html|nunjucks)', ['nunjucks']);
+  gulp.watch(bases.app + '/**/*.+(html|nunjucks)', ['nunjucks']);
   gulp.watch(bases.app + 'img/*', ['imagemin']);
 });
 

@@ -23,7 +23,7 @@ typewriter.typeString('This Time Bigger')
 .typeString('Infinite')
 .pauseFor(2000)
 .deleteAll()
-.typeString('Fun with AnantFest-2k18')
+.typeString('Fun with Anant Fest')
 .pauseFor(2000)
 .start();
 });

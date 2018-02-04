@@ -8,22 +8,49 @@
 // that are common across all components of the page and use class selectors
 // where appropriate.
 
+/********************************************
+page -Layout
+********************************************/
+section{
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height:100vh;
+  width: 100vw;
+}
+.section-about{
+  @include background-image("https://media.giphy.com/media/oBKgw5OeLELOU/giphy.gif");
+}
+.section-contact{
+  @include background-image("https://media.giphy.com/media/3xz2BLvZyo4ghBUIbS/giphy.gif");
+}
+.section-social{
+  @include background-image("https://media.giphy.com/media/xUA7biF7n8LcAqh4bK/giphy.gif");
+}
+.section-events{
+  @include background-image("../img/technical.gif");
+}
+.section-event-page{
+  @include background-image("../img/technical.gif");
+}
 /***********************
 navbar
 **********************/
 .navbar-fix{
+  font-family: 'Macondo', cursive;
   position: fixed;
   top: 50%;
-  right: 0;
+  right: -3%;
   z-index: 100;
   transform: translateY(-50%);
 }
 .navbar-item{
-
   list-style: none;
   margin-bottom: 5px;
 }
 .navbar-link{
+  font-size: 1.9rem !important ;
   text-decoration: none;
   outline: none;
   display: block;
@@ -32,14 +59,22 @@ navbar
   padding: 2px 50px 2px 35px;
   font-size: 1rem;
   color: #fff;
-  opacity: 0.7;
+  opacity: 0.8;
   background: linear-gradient(90deg,
   rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 2.4);
   position: relative;
   &:hover{
-    right:-10px;
+    text-decoration: none;
+    color: #fff;
+    right:30px;
     opacity: 1;
+  }
+  &:active{
+  color: orange!important;
+  right: 30px;
+  opacity: 1;
+  text-decoration: none;
   }
   &::before{
     content: "";
@@ -65,11 +100,6 @@ navbar
 	top: 6px;
 	left: 6px;
   }
-  &:active{
-  color: orange;
-	right: -10px;
-	opacity: 1;
-  }
   &:after{
     background: radial-gradient(#ffc04d, #b37400);
   }
@@ -81,7 +111,7 @@ header
 .main-header{
   height: 100vh;
   position: relative;
-  @include background-image("https://media.giphy.com/media/26BRGoqbUQvk8nwTC/giphy.gif");
+  @include background-image("../img/bg.jpg");
 }
 
 .logo-tag{
@@ -119,6 +149,142 @@ header
     vertical-align: middle;
   }
 
+  .logo-text{
+    margin:0;
+  padding: 5px;
+  }
+  .logo{
+    border-right: 2px solid white;
+    margin: 10px;
+  }
+  #moto-text{
+    color: white;
+    font-family: 'Macondo', cursive;
+    font-size: 52px;
+  }
+#logo-quote{
+  margin-top: 55px;
+}
+.logo-text{
+  margin:0;
+padding: 5px;
+font-family:'Macondo', cursive;
+font-size: 32px;
+/*color: #760505;*/
+color:white;
+text-align: right;
+margin-top: -10px;
+}
+.logo-text2{
+  margin:0;
+  text-align: left;
+  margin-bottom: -15px;
+padding: 5px;
+font-family:'Macondo', cursive;
+font-size: 26px;
+/*color: #760505;*/
+color:white;
+}
+.logo-text1{
+  margin:0;
+padding: 5px;
+font-family: 'Berkshire Swash', cursive;
+font-size: 52px;
+letter-spacing: 8px;
+/*color: #760505;*/
+color: white;
+}
+.logo{
+  border-right: 2px solid white;
+  margin: 10px;
+}
+#demo {
+  text-align: center;
+  font-size: 60px;
+  font-family:'Macondo', cursive;
+  color: white;
+}
+
 /*******************************************
-rotator
+Events
 **********************************/
+#cultural,#informal, #literary{
+  display: none;
+}
+.events{
+  vertical-align: middle;
+/*  margin: 10px; */
+}
+.card{
+  padding-top: 20px;
+/*  position: relative; */
+  text-align: center;
+  margin-top: 5px;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px black;
+  background-image:url('../img/pattern-7.gif');
+  color: black;
+/*  padding: 10px;
+  margin-top: 10px; */
+  &:hover{
+    box-shadow: 0 5px 20px black;
+  }
+  a{
+  /*  position: absolute;
+    bottom: 30px;
+    left: 60px; */
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 1.8rem;
+    &:hover{
+      color: black !important ;
+    }
+    &:active{
+      color: black !important;
+    }
+  }
+}
+
+.event-name{
+    text-transform: uppercase;
+    padding: 30px 0;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    text-shadow: 0 2px 2px grey;
+}
+
+@media (min-width: 600px){
+  .wheel{
+    position: relative;
+  }
+  #wheelDiv{
+    position: absolute;
+    top:100px;
+    left: -10;
+  }
+}
+  #wheelDiv {
+    height: 400px;
+    width: 400px;
+    margin: auto;
+  }
+
+  #wheelDiv>svg {
+    height: 100%;
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    #wheelDiv {
+      height: 350px;
+      width: 350px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    #wheelDiv {
+      height: 300px;
+      width: 300px;
+    }
+  }

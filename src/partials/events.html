@@ -1,0 +1,505 @@
+<script type="text/javascript">
+  window.onload = function() {
+
+    var wheel = new wheelnav("wheelDiv");
+    wheel.slicePathFunction = slicePath().CogSlice;
+  //  wheel.cssMode = true;
+    wheel.sliceHoverTransformFunction = sliceTransform().RotateTitleTransform;
+    wheel.sliceSelectedTransformFunction = sliceTransform().MoveMiddleTransform;
+    wheel.hoverPercent = 0.9;
+    wheel.selectedPercent = 1.1;
+    wheel.wheelRadius = wheel.wheelRadius * 0.8;
+    wheel.createWheel(["Technical", "cultural", "literary", "Informal"]);
+    wheel.navItems[0].navigateFunction = function() {
+      $('#technical').css({
+        "display":"block",
+      });
+      $('.section-events').css({
+        "background-image":"url('../img/technical.gif')"
+      });
+      $('#cultural, #literary, #informal').css({
+        "display":"none"
+      });
+    };
+    wheel.navItems[1].navigateFunction = function() {
+      $('#cultural').css({
+        "display":"block",
+      });
+      $('.section-events').css({
+        "background-image":"url('../img/cultural.jpg')"
+        });
+      $('#technical, #literary, #informal').css({
+        "display":"none",
+      });
+    };
+    wheel.navItems[2].navigateFunction = function() {
+      $('#literary').css({
+        "display":"block"
+      });
+      $('.section-events').css({
+        "background-image":"url('../img/literary.jpg')"
+        });
+      $('#cultural, #technical, #informal').css({
+        "display":"none"
+      });
+    };
+    wheel.navItems[3].navigateFunction = function() {
+      $('#informal').css({
+        "display":"block"
+      });
+      $('.section-events').css({
+        "background-image":"url('../img/informal.jpg')"
+        });
+      $('#cultural, #literary, #technical').css({
+        "display":"none"
+      });
+    };
+  };
+</script>
+<style>
+#wheelDiv{
+  font-family: 'Berkshire Swash', cursive;
+}
+ [ id^=wheelnav-wheelDiv-title] {
+  font-family: 'Berkshire Swash', cursive !important;
+font-size: 20px !important;
+  cursor: pointer  !important;
+
+}
+.nav-tabs{
+  font-family: 'Berkshire Swash', cursive !important;
+  font-size: 1.5rem;
+}
+.nav-tabs li a{
+  color:white;
+}
+/*.nav-tabs li a:hover, a:active{
+  color:white;
+} */
+a{
+  cursor: pointer;
+}
+</style>
+<section class="section-events">
+  <div class="container" style="background-color:rgba(0,0,0,0.4);">
+    <div class="row">
+      <div class="col-sm-4" class="wheel">
+        <div id="wheelDiv"></div>
+      </div>
+      <div class="col-sm-8">
+        <div class="events">
+          <div id="technical">
+            <ul class="nav nav-tabs" style="margin-left:-10px;text-shadow: 0 0 2px black;fon-size:1.5rem; color:white;">
+              <li  class="active"><a data-toggle="tab"href="#cse" >CSE/ IT/ MCA</a></li>
+              <li><a data-toggle="tab" href="#ece">ECE</a></li>
+              <li><a data-toggle="tab" href="#mech">MECHANICAL</a></li>
+            </ul>
+
+            <div class="tab-content">
+              <div id="cse" class="tab-pane fade in active">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <a  id="9" href="#" class="page-transition">
+                      <div class="card">
+                        <h1 class="event-name">web Hackathon</h1>
+
+                      </div> </a>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <h1 class="event-name">Workshop</h1>
+
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+              <a  id="11" href="#" class="page-transition">
+                 <div class="card">
+                        <h1 class="event-name">Dazzle Coding</h1>
+
+                      </div> </a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <h1 class="event-name">Freestyle Coding</h1>
+
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+              <a  id="12" href="#" class="page-transition">
+                      <div class="card">
+                        <h1 class="event-name">tech quila</h1>
+
+                      </div> </a>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <h1 class="event-name">fun with anant</h1>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-4">
+                        <div class="card">
+                          <h1 class="event-name">fun with anant</h1>
+
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="card">
+                          <h1 class="event-name">fun with anant</h1>
+
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="card">
+                          <h1 class="event-name">fun with anant</h1>
+
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div id="ece" class="tab-pane fade">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <h1 class="event-name">line seguidor</h1>
+
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <h1 class="event-name">Robo soccer</h1>
+
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <h1 class="event-name">Technical quiz</h1>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <h1 class="event-name">Robo War</h1>
+
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <h1 class="event-name">Fun with anant</h1>
+
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <h1 class="event-name">Fun with anant</h1>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-4">
+                        <div class="card">
+                          <h1 class="event-name">Fun with anant</h1>
+
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="card">
+                          <h1 class="event-name">Fun with anant</h1>
+
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="card">
+                          <h1 class="event-name">Fun with anant</h1>
+
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div id="mech" class="tab-pane fade">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <a  id="17" href="#" class="page-transition">
+                      <div class="card">
+                        <h1 class="event-name">Dust Racer</h1>
+
+                      </div></a>
+                    </div>
+                    <div class="col-sm-4">
+                      <a  id="18" href="#" class="page-transition">
+                      <div class="card">
+                        <h1 class="event-name">Hydro jet</h1>
+
+                      </div></a>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <h1 class="event-name">fun with anant</h1>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <h1 class="event-name">fun with anant</h1>
+
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <h1 class="event-name">Fun with anant</h1>
+
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <h1 class="event-name">Fun with anant</h1>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-4">
+                        <div class="card">
+                          <h1 class="event-name">Fun with anant</h1>
+
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="card">
+                          <h1 class="event-name">Fun with anant</h1>
+
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="card">
+                          <h1 class="event-name">Fun with anant</h1>
+
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="cultural">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-4">
+                  <a id="19" class="page-transition">
+                    <div class="card">
+                    <h1 class="event-name">Halla Bol</h1>
+
+                  </diV></a>
+                </div>
+                <div class="col-sm-4">
+                  <a id="20" class="page-transition">
+                  <div class="card">
+                    <h1 class="event-name">Foot freakers</h1>
+
+                  </diV></a>
+                </div>
+                <div class="col-sm-4">
+                  <a id="21" class="page-transition">
+                  <div class="card">
+                    <h1 class="event-name">Strings</h1>
+
+                  </diV></a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <a id="22" class="page-transition">
+                  <div class="card">
+                    <h1 class="event-name">Lose Yourself</h1>
+
+                  </diV></a>
+                </div>
+                <div class="col-sm-4">
+                  <a id="23" class="page-transition">
+                  <div class="card">
+                    <h1 class="event-name">Spot Light</h1>
+
+                  </diV></a>
+                </div>
+                <div class="col-sm-4">
+                  <a id="24" class="page-transition">
+                  <div class="card">
+                    <h1 class="event-name">unplugged</h1>
+
+                  </diV></a>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-4">
+                    <a id="25" class="page-transition">
+                    <div class="card">
+                      <h1 class="event-name">Virsa</h1>
+
+                    </diV></a>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <h1 class="event-name">fun with anant</h1>
+
+                    </diV>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <h1 class="event-name">fun with anant</h1>
+
+                    </diV>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div id="informal">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="card">
+                    <h1 class="event-name">Dance Faceoff</h1>
+
+                  </diV>
+                </div>
+                <div class="col-sm-4">
+                  <div class="card">
+                    <h1 class="event-name">Bhangra battles</h1>
+
+                  </diV>
+                </div>
+                <div class="col-sm-4">
+                  <div class="card">
+                    <h1 class="event-name">Treasure Hunt</h1>
+
+                  </diV>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="card">
+                    <h1 class="event-name">Ad Mad</h1>
+
+                  </diV>
+                </div>
+                <div class="col-sm-4">
+                  <div class="card">
+                    <h1 class="event-name">IPL Auction</h1>
+
+                  </diV>
+                </div>
+                <div class="col-sm-4">
+                  <div class="card">
+                    <h1 class="event-name">fun with anant</h1>
+
+                  </diV>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <h1 class="event-name">fun with anant</h1>
+
+                    </diV>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <h1 class="event-name">fun with anant</h1>
+
+                    </diV>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <h1 class="event-name">fun with anant</h1>
+
+                    </diV>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div id="literary">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-4">
+                  <a id="26" class="page-transition">
+                  <div class="card">
+                    <h1 class="event-name">Paricharcha</h1>
+
+                  </diV></a>
+                </div>
+                <div class="col-sm-4">
+                  <a id="27" class="page-transition">
+                  <div class="card">
+                    <h1 class="event-name">English debate</h1>
+
+                  </diV></a>
+                </div>
+                <div class="col-sm-4">
+                  <a id="28" class="page-transition">
+                  <div class="card">
+                    <h1 class="event-name">Pen your Fiction</h1>
+
+                  </diV></a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <a id="29" class="page-transition">
+                  <div class="card">
+                    <h1 class="event-name">Mock Parliament</h1>
+
+                  </diV></a>
+                </div>
+                <div class="col-sm-4">
+                  <div class="card">
+                    <h1 class="event-name">Moot Court</h1>
+
+                  </diV>
+                </div>
+                <div class="col-sm-4">
+                  <div class="card">
+                    <h1 class="event-name">fun with anant</h1>
+
+                  </diV>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <h1 class="event-name">fun with anant</h1>
+
+                    </diV>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <h1 class="event-name">fun with anant</h1>
+
+                    </diV>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <h1 class="event-name">fun with anant</h1>
+
+                    </diV>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</secttion>

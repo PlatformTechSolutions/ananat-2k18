@@ -1,0 +1,194 @@
+<style>
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* containers around content */
+.containers {
+    padding: 5px 5px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.containers::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the containers to the left */
+.left {
+    left: 0;
+}
+
+/* Place the containers to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left containers (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right containers (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 15px 15px;
+    background-color: black;
+    opacity: 0.7;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media all and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .containers {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .containers::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+   .heading{
+            font-family: 'Berkshire Swash', cursive;
+            font-size: 46px;
+            letter-spacing: 3px;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: -5px;
+        }
+         .subhead{
+            font-family: 'Berkshire Swash', cursive;
+            font-size: 26px;
+            letter-spacing: 3px;
+            /*text-align: center;*/
+            margin-bottom: 10px;
+            padding-top: -10px;
+        }
+
+         .ssubhead{
+            font-family: 'Berkshire Swash', cursive;
+            font-size: 20px;
+            letter-spacing: 3px;
+            /*text-align: center;*/
+            margin-bottom: 10px;
+        }
+        .ctn{
+            font-family: 'Macondo', cursive;
+            font-size: 1em;
+            color: white;
+            padding-top: 3px;
+          }
+		</style>
+	</head>
+	<body>
+    <section class="section-social" id="social">
+      <center><h1 class="heading">Social Cause</h1>
+      <hr style="width: 20%; border-width: 3px; margin-bottom:5px;"> </center>
+		<div class="timeline">
+  <div class="containers left">
+    <div class="content">
+      <center><h2 class="subhead">Blood Donation Camp</h2></center>
+      <!--h3>Facts</h3-->
+      <p class="ctn">“The Blood You Donate Gives Someone Another Chance At Life. One Day That Someone May Be A Close Relative, A Friend, A Loved One—Or Even You.” <br>Donate blood save life.</p>
+      <!--ul>
+      	<li>The average adult has about 10 pints of blood in his body, whereas roughly 1 pint is given during a donation.</li>
+      	<!--li>The shelf-life of donated blood is 35 to 42 days, there is a constant need to replenish stocks in our blood banks.</li-->
+      	<!--li>Blood cannot be manufactured anywhere or synthesized indirectly, it can only come from generous donors.</li>
+      	<li>2 or 3 lives can be saved from the blood cells, plasma and platelets obtained from just a single unit of blood</li>
+      </ul>
+      <!--h3>Statistics</h3>
+      <ul>
+      	<li>More than 38,000 blood donations are needed every day.</li>
+      	<li>According to the Ministry of Health and Family Welfare, in 2015-16, blood collection witnesseda shortage of 11.5 lakh units.</li>
+      	<li>India faced a 10 percent shortage in its estimated blood requirement in 2015-16.</li>
+      </ul-->
+      <h3 class="ssubhead">Contact</h3>
+      <p class="ctn">Official : +919463221419<br>info@anantfest.com</p>
+    </div>
+  </div>
+  <div class="containers right">
+    <div class="content">
+      <center><h1 class="subhead">Website for Social Cause</h1></center>
+      <p class="ctn">"Technology is not the the revolution ,the revolution is in human awareness.It is just made clearer by technology".Platform Tech Solutions just focus to provide its best efforts for their upliftment and awareness by developing websites for social cause and global community.</p>
+       <h3 class="ssubhead">Contact</h3>
+      <p class="ctn">support@platfromtechs.com<br>community@platformtechs.com</p>
+    </div>
+  </div>
+</div>
+</section>

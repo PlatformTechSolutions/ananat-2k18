@@ -2,7 +2,7 @@ var PageTransitions = (function() {
 
 	var $main = $( '#pt-main' ),
 		$pages = $main.children( 'div.pt-page' ),
-		$iterate = $( '.navbar-item' ),
+		$iterate = $( '.page-transition' ),
 		animcursor = 20,
 		pagesCount = $pages.length,
 		current = 0,
@@ -40,7 +40,7 @@ var PageTransitions = (function() {
 
 		$iterate.on( 'click', function() {
 			var id = $(this).attr('id');
-			count = parseInt(id);
+			count = parseInt(id, 10);
 			if( isAnimating ) {
 				return false;
 			}
@@ -63,7 +63,7 @@ var PageTransitions = (function() {
 		isAnimating = true;
 
 		var $currPage = $pages.eq( current );
-
+console.log(pagesCount);
 		if(options.showPage){
 			if( options.showPage < pagesCount  ) {
 				current = options.showPage;
@@ -74,7 +74,7 @@ var PageTransitions = (function() {
 		}
 		else{
 			if( current < pagesCount  ) {
-				current = count
+				current = count;
 			}
 			else {
 				current = 0;
