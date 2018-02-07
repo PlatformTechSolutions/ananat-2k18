@@ -8,6 +8,8 @@
 // that are common across all components of the page and use class selectors
 // where appropriate.
 
+
+
 /********************************************
 page -Layout
 ********************************************/
@@ -245,6 +247,15 @@ Events
   }
 }
 
+/*.card:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+} */
 .event-name{
     text-transform: uppercase;
     padding: 30px 0;
@@ -252,6 +263,9 @@ Events
     font-size: 2.5rem;
     line-height: 1.5;
     text-shadow: 0 2px 2px grey;
+  /*  position: relative; */
+    background: rgba(0, 0, 0, 0.6);
+    color:white;
 }
 
 @media (min-width: 600px){
@@ -288,3 +302,57 @@ Events
       width: 300px;
     }
   }
+
+/****************************************
+ Event card and individual page
+ *********************************************/
+ #hallaBol{
+   @include background-image("../img/halla_bol.jpg");
+ }
+#hallaBolPage{
+  @include background-image("../img/halla_bol_page.jpg");
+}
+#footFreakers{
+  @include background-image("../img/foot_freakers.jpg");
+}
+#footFreakersPage{
+  @include background-image("../img/foot_freakers_page.jpg");
+}
+
+#strings{
+  @include background-image("../img/strings.jpg");
+}
+#stringsPage{
+  @include background-image("../img/strings_page.jpg");
+}
+
+#lose{
+  @include background-image("../img/lose.jpg");
+}
+#losePage{
+  @include background-image("../img/lose_page.jpg");
+}
+
+#spotLight{
+  @include background-image("../img/spotLight.jpg");
+  /* opacity: 0.5; */
+}
+#spotLightPage{
+  @include background-image("../img/spotLight_page.jpg");
+}
+
+#unplugged{
+  @include background-image("../img/unplugged.jpg");
+  /* opacity: 0.5; */
+}
+#unpluggedPage{
+  @include background-image("../img/unplugged_page.jpg");
+}
+
+#virsa{
+  @include background-image("../img/virsa.jpg");
+  /* opacity: 0.5; */
+}
+#virsaPage{
+  @include background-image("../img/virsa_page.jpg");
+}
