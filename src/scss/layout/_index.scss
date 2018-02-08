@@ -436,11 +436,11 @@ Events
   @include background-image("../img/electro_quiz_page.jpg");
 }
 #electroVeda{
-  @include background-image("../img/");
+  @include background-image("../img/electro_veda.jpg");
   /* opacity: 0.5; */
 }
 #electroVedaPage{
-  @include background-image("../img/");
+  @include background-image("../img/electro_veda_page.jpg");
 }
 #webHackathon{
   @include background-image("../img/web_hackathon.jpeg");
@@ -511,4 +511,60 @@ Events
 }
 #lawQuizPage{
   @include background-image("../img/law_quiz_page.jpeg  ");
+}
+#bhangraBattles{
+  @include background-image("../img/bhangra_battles.jpg");
+  /* opacity: 0.5; */
+}
+#bhangraBattlesPage{
+  @include background-image("../img/bhangra_battles_page.jpg");
+}
+#danceFaceoff{
+  @include background-image("../img/dance_faceoff.jpg");
+  /* opacity: 0.5; */
+}
+#danceFaceoffPage{
+  @include background-image("../img/dance_faceoff_page.jpg  ");
+}
+#TreasureHunt{
+  @include background-image("../img/treasure_hunt.jpg");
+  /* opacity: 0.5; */
+}
+#TreasureHuntPage{
+  @include background-image("../img/treasure_hunt_page.jpg ");
+}
+#dustRacer{
+  @include background-image("../img/dust_racer.jpg");
+  /* opacity: 0.5; */
+}
+#dustRacerPage{
+  @include background-image("../img/dust_racer_page.jpg ");
+}
+#adMad{
+  @include background-image("../img/ad_mad.png");
+  /* opacity: 0.5; */
+}
+#adMadPage{
+  @include background-image("../img/ad_mad_page.png ");
+}
+#iplAuction{
+  @include background-image("../img/ipl_auction.png");
+  /* opacity: 0.5; */
+}
+#iplAuctionPage{
+  @include background-image("../img/ipl_auction_page.png ");
+}
+#hydroJet{
+  @include background-image("../img/hydro_jet.jpg");
+  /* opacity: 0.5; */
+}
+#hydroJetPage{
+  @include background-image("../img/hydro_jet_page.jpg ");
+}
+#quizzitch{
+  @include background-image("../img/quizzitch.png");
+  /* opacity: 0.5; */
+}
+#QuizzitchPage{
+  @include background-image("../img/quizzitch_page.png ");
 }
