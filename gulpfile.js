@@ -21,6 +21,8 @@ var gulp        = require('gulp'),
     sourcemaps  = require('gulp-sourcemaps'),
     colors      = require('colors'),
     sassdoc     = require('sassdoc'),
+    nunjucksRender = require('gulp-nunjucks-render');
+
     // Temporary solution until gulp 4
     // https://github.com/gulpjs/gulp/issues/355
     runSequence = require('run-sequence');
@@ -169,7 +171,7 @@ gulp.task('copy', function() {
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}));
-  
+
   //copy vendor to dist directory
   gulp.src(bases.app + 'vendor/**/*')
     .pipe(size({ gzip: true, showFiles: true }))
@@ -191,16 +193,29 @@ gulp.task('sass-lint', function() {
     .pipe(sassLint.failOnError());
 });
 
-gulp.task('minify-html', function() {
-  gulp.src(bases.app + './*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest(bases.dist))
-    .pipe(reload({stream:true}));
+gulp.task('nunjucks', function() {
+  // Gets .html and .nunjucks files in pages
+  return gulp.src(bases.app + 'pages/**/*.+(html|nunjucks)')
+  // Renders template with nunjucks
+  .pipe(nunjucksRender({
+      path: [bases.app + 'partials']
+    }))
+  // output files in app folder
+  .pipe(htmlmin({collapseWhitespace: true}))
+  .pipe(gulp.dest(bases.dist))
+  .pipe(reload({stream:true}));
 });
+
+//gulp.task('minify-html', function() {
+//  gulp.src(bases.app + 'pages/**/*.html') */
+//    .pipe(htmlmin({collapseWhitespace: true}))
+//    .pipe(gulp.dest(bases.dist))
+//    .pipe(reload({stream:true}));
+//});
 
 gulp.task('watch', function() {
   gulp.watch(bases.app + 'scss/**/*.scss', ['styles']);
-  gulp.watch(bases.app + './*.html', ['minify-html']);
+  gulp.watch(bases.app + '/**/*.+(html|nunjucks)', ['nunjucks']);
   gulp.watch(bases.app + 'img/*', ['imagemin']);
 });
 
@@ -236,7 +251,7 @@ gulp.task('sassdoc', function () {
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'browser-sync', 'js-app', 'js-libs', 'imagemin', 'minify-html', 'styles', 'themes', 'copy', 'watch', done);
+  runSequence('clean:dist', 'browser-sync', 'js-app', 'js-libs', 'imagemin', 'nunjucks', 'styles', 'themes', 'copy', 'watch', done);
 });
 
 gulp.task('build', function(done) {
