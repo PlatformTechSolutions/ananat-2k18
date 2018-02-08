@@ -1,0 +1,397 @@
+.full{
+    margin: 0px;
+    padding: 0px;
+    background-color: #f9fbe7;
+    color: #D3B53D;
+}
+
+.row{
+	margin-left:0px;
+	margin-right:0px;
+}
+
+.top{
+border:1px solid black;
+    margin-bottom:5% ;
+}
+.sty{
+    color:#ef5350;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 300%;
+
+    margin-top: 5%;
+}
+.headin{
+    font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 4em;
+    font-weight:900;
+    color:#ef5350;
+    margin:auto;}
+.rows{
+    margin-bottom: :5%;
+}
+
+.row,
+.column {
+    box-sizing: border-box;
+
+}
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.column {
+    position: relative;
+    float: left;
+    display: block;
+
+}
+.column-3{
+
+    width: 23.8%;
+    padding: 2%;
+}
+.column-3t{
+     width: 23.8%;
+     margin-bottom: 1%;
+}
+.column-4{
+
+    width: 31%;
+    padding: 2%;
+}
+.column-4f{
+
+    width: 46%;
+    padding: 1%;
+
+
+}
+.column-4f:first-child{
+    margin-left:2% ;
+}
+.column-6 {
+    /*border: 1px solid red;*/
+    width: 52.4%;
+    margin-bottom: 1%;
+}
+@media only screen and (max-width: 800px) {
+     .headin{
+        width: auto;
+        font-size:4em;
+        font-weight:bold;
+
+    }
+
+}
+@media only screen and (max-width: 650px) {
+     .column-3,.column-4,.column-4f,.column-6,.column-12{
+        width: auto;
+        float: none;
+        margin: 0%;
+        text-align: center;
+    }
+
+.navbar{
+    width: auto;
+    height:auto;
+    margin: 0px;
+    display: flex;
+}
+    /*.icon2{
+padding-right: 35%;
+}*/
+}
+     .column + .column {
+        margin-left: 0;
+    }
+    .column-12 {
+    width: 100%;
+    margin-left: 0;
+}
+.row:last-child {
+}
+.fact{
+    font-family: "BebasNeueRegular","Arial Narrow" sans-serif;
+    text-align: center;
+    letter-spacing: 0.7px;
+    line-height: 1.5;
+    word-spacing: -0.1em;
+    font-weight: medium;
+    font-size: 1.2em;
+    color: black;
+    margin-top: 0.5%;
+}
+
+.stats{
+clear: both;
+}
+
+/*  SECTIONS  */
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+/*  COLUMN SETUP  */
+.col {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.1%;
+}
+
+.col:first-child {
+ margin-left: 0;
+  }
+
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*  GRID OF THREE  */
+/*.span_3_of_3 {
+    width: 100%;
+}
+.span_2_of_3 {
+    width: 66.1%;
+}*/
+.span_1_of_3 {
+    width: 32%;
+    border-right: 1px solid #f5b1a9;
+
+}
+.span_1_of_2 {
+    width: 45%;
+
+
+      }
+      /*.e{
+        border:1px solid red;
+        margin-left:2.5%;
+      }*/
+.span_1_of_3:last-child {border:none;}
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 650px) {
+    .col {
+        margin: 1% 0 1% 0%;
+    }
+    .span_3_of_3, .span_2_of_3, .span_1_of_3
+    {
+        width: 100%;
+
+         }
+
+    #stats{
+        text-align: center;
+    }
+    .span_1_of_3{
+        border:none;
+    }
+
+.icon,.icon2{
+
+padding-right:35%;/*SAVE*/
+
+/*border:1px solid red;*/
+}
+.span_1_of_2{
+    width: 100%;
+
+}
+}
+
+.test{
+padding: 30%;
+}
+.main{
+ /*background-image: url("http://www.shearervw.com/blogs/947/wp-content/uploads/2016/01/Blood_646x300.jpg");*/
+ /*background-repeat: repeat-x;*/
+ background-color:#da251c ;
+ max-width: 100%;
+ height: auto;
+}
+.icon{
+
+/*border:1px solid red;*/
+padding-left: 30%;
+margin:0px;
+}
+.icon2{
+
+/*border:1px solid red;*/
+padding-left: 30%;
+margin:0px;
+}
+#stats{
+    font-family: "BebasNeueRegular","Arial Narrow" sans-serif;
+    text-align:center;
+    letter-spacing: 0.7px;
+    line-height: 1.5;
+    word-spacing: -0.1em;
+    font-weight: medium;
+    font-size: 1.2em;
+    color: black;
+    margin-top: 0.5%;
+}
+
+.navbar{
+    width: auto;
+    height:25%;
+    margin: 0px;
+    display: flex;
+
+}
+ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    position: absolute;
+    /*margin-left: 45%;*/
+
+}
+
+/*Create a horizontal list with spacing*/
+li {
+    display:inline-block;
+    float: left;
+    margin-right: 1px;
+}
+/*Style for menu links*/
+li a {
+    display:block;
+    min-width:140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#13898a;
+    background: #95f5cf;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Hover state for top level links*/
+li:hover a {
+    background: #60de0e;
+}
+
+/*Style for dropdown links*/
+li:hover ul a {
+    background: #f3f3f3;
+    color: #e7f4de;
+    height: 40px;
+    line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+li:hover ul a:hover {
+    background: #19c589;
+    color: #fff;
+}
+.icon1{
+
+/*border:1px solid red;*/
+padding-left: 40%;
+margin:0px;
+}
+.credit{
+font-size: small;
+font-weight: bold;
+text-align:center;
+}
+.footer{
+
+}
+.cre{
+    color:red;
+    font-size: medium;
+}
+
+.platform h1{
+    font-family: 'Risque', cursive;
+    text-align: center;
+    font-size: 75px;
+     
+}
+
+.moto{
+    text-align: center;
+    font-size:10px;
+    padding-top: 5%;
+    font-size: 12px;
+    }
+
+.quote{
+    font-family: "comic sans ms";
+    color: red;
+    padding-top: 1%;
+}
+
+.ABOUT_US{
+    text-align: center;
+    padding:10px 10px 0px 10px;;
+}
+.about{
+    text-align: justify;
+    text-justify:inter-word;
+    padding: 0px 5%; 
+}
+
+.ourwork h4,h3{
+    text-align: center;
+    padding:1% 5%;
+}
+.OUR_WORK{
+    text-align: center;
+    padding-top: 2%;
+}
+
+.PROCESS{
+    text-align: center;
+    padding-top: 1%;
+}
+#list{
+    text-align: center !important;
+    font-size: 20px;
+    padding:  20px 0px 0px 550px;;
+    text-align: justify;
+    text-justify:inter-word;
+}
+.deepak{
+    text-align: center;
+    margin-top: 250px;
+}
+
+.platform{
+    background-image:"10.jpg";
+}
+
+
+
+
+
+
+
