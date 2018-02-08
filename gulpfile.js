@@ -21,10 +21,6 @@ var gulp        = require('gulp'),
     sourcemaps  = require('gulp-sourcemaps'),
     colors      = require('colors'),
     sassdoc     = require('sassdoc'),
-    nunjucksRender = require('gulp-nunjucks-render');
-  //*  data        = require('gulp-data'); */
-
-
     // Temporary solution until gulp 4
     // https://github.com/gulpjs/gulp/issues/355
     runSequence = require('run-sequence');
@@ -81,11 +77,6 @@ var sassOptions = {
 var prefixerOptions = {
   browsers: ['last 2 versions']
 };
-
-
-/*var globalData = {
-    Data: require('./src/data/Data.json')
-}; */
 
 // BUILD SUBTASKS
 // ---------------
@@ -178,7 +169,7 @@ gulp.task('copy', function() {
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}));
-
+  
   //copy vendor to dist directory
   gulp.src(bases.app + 'vendor/**/*')
     .pipe(size({ gzip: true, showFiles: true }))
@@ -191,11 +182,6 @@ gulp.task('copy', function() {
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}));
 
-    gulp.src(bases.app + 'img/**/*')
-      .pipe(size({ gzip: true, showFiles: true }))
-      .pipe(gulp.dest(bases.dist + 'img'))
-      .pipe(reload({stream:true}));
-
 });
 
 gulp.task('sass-lint', function() {
@@ -205,37 +191,20 @@ gulp.task('sass-lint', function() {
     .pipe(sassLint.failOnError());
 });
 
-gulp.task('nunjucks', function() {
-  // Gets .html and .nunjucks files in pages
- return gulp.src(bases.app + 'pages/**/*.+(html|nunjucks)')
-// Invoking the data into template.
-/*  .pipe(data(function() {
-      return globalData;
-    })) */
-  // Renders template with nunjucks
-  .pipe(nunjucksRender({
-      path: [bases.app + 'partials']
-    }))
-  // output files in dist folder
-  .pipe(htmlmin({collapseWhitespace: true}))
-  .pipe(gulp.dest(bases.dist))
-  .pipe(reload({stream:true}));
+gulp.task('minify-html', function() {
+  gulp.src(bases.app + './*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(bases.dist))
+    .pipe(reload({stream:true}));
 });
-
-//gulp.task('minify-html', function() {
-//  gulp.src(bases.app + 'pages/**/*.html') */
-//    .pipe(htmlmin({collapseWhitespace: true}))
-//    .pipe(gulp.dest(bases.dist))
-//    .pipe(reload({stream:true}));
-//});
 
 gulp.task('watch', function() {
   gulp.watch(bases.app + 'scss/**/*.scss', ['styles']);
-  gulp.watch(bases.app + '/**/*.+(html|nunjucks)', ['nunjucks']);
+  gulp.watch(bases.app + './*.html', ['minify-html']);
   gulp.watch(bases.app + 'img/*', ['imagemin']);
 });
 
-/*gulp.task('imagemin', function() {
+gulp.task('imagemin', function() {
   return gulp.src(bases.app + 'img/*')
     .pipe(imagemin({
       progressive: true,
@@ -243,7 +212,7 @@ gulp.task('watch', function() {
       use: [pngquant()]
     }))
     .pipe(gulp.dest(bases.dist + 'img'));
-}); */
+});
 
 gulp.task('sassdoc', function () {
   var options = {
@@ -267,9 +236,9 @@ gulp.task('sassdoc', function () {
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'browser-sync', 'js-app', 'js-libs', 'nunjucks', 'styles', 'themes', 'copy', 'watch', done);
+  runSequence('clean:dist', 'browser-sync', 'js-app', 'js-libs', 'imagemin', 'minify-html', 'styles', 'themes', 'copy', 'watch', done);
 });
 
 gulp.task('build', function(done) {
-  runSequence('clean:dist', 'js-app', 'js-libs', 'minify-html', 'styles', 'copy', done);
+  runSequence('clean:dist', 'js-app', 'js-libs', 'imagemin', 'minify-html', 'styles', 'copy', done);
 });
