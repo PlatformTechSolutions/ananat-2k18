@@ -1,0 +1,192 @@
+<style>
+.containerTeam{
+            padding: 20px;
+            margin: 10px;
+            width:200px;
+            height: 200px;
+            border-radius: 50%;
+            position:relative;
+            perspective: 800px;
+        }
+        #card{
+            width:100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 1.5s;
+            transform-origin: right center;
+        }
+        #card figure{
+            margin: 0;
+            display: block;
+            position: absolute;
+            width: 100%;
+            height:100%;
+            backface-visibility: hidden;
+            display: block;
+            color: white;
+            padding-top: 70px;
+            font-family: 'Macondo', cursive;
+            font-size: 1.3em;
+            letter-spacing: 2px;
+            text-align: center;
+            border-radius: 50%
+        }
+        #card .front{
+
+            border-radius: 50%;
+            width:200px;
+            height: 200px;
+
+
+        }
+        #card .back{
+            background:#000066;
+            transform: rotateY(180deg);
+        }
+        #card:hover{
+            transform: translateX(-100%) rotateY(180deg );
+        }
+        #heading{
+            font-family: 'Berkshire Swash', cursive;
+            font-size: 46px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: white;
+        }
+        @media (min-width:960px){
+          #rou{
+              padding-top: 100px;
+          }
+        }
+
+        .textTeam  a{
+          font-size: 25px ! important;
+        }
+        .textTeam a:hover{
+
+            font-size: 10px !important;
+        }
+    </style>
+<section class="section-webTeam">
+  <div class="container event-container">
+    <div class="event-content">
+      <div class="heading">
+        <h1 style="color:white; font-weight:600;">Website - Team<center><hr></center></h1>
+      </div>
+    <div class="row" id="rou">
+      <div class="offset-sm-2 col-sm-4">
+        <div class="containerTeam">
+          <div id="card">
+            <figure class="front" style="background-image:url('img/team/Divesh.jpg');"></figure>
+            <figure class="back">
+              <p class="text textTeam">Divesh<br>CSE 3rd year<br>
+                <h1><a href="#" target="_blank" style="color:white;margin:5px;"><i class="fa fa-facebook"></i></a>
+                <a href="#" target="_blank" style="margin:5px;color: white;"><i class="fa fa-linkedin"></i></a>
+             </h1></p>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="containerTeam">
+          <div id="card">
+            <figure class="front" style="background-image: url('img/team/Akanksha.jpg');"></figure>
+            <figure class="back">
+              <p class="text textTeam">Akanksha Sharma<br>CSE 2nd year<br>
+                <h1><a href="www.facebook.com/akanksha.sharma.526438" target="_blank" style="color:white;margin:5px;"><i class="fa fa-facebook"></i></a>
+                <a href="www.linkedin.com/in/akankshasharma12" target="_blank" style="margin:10px;color: white;"><i class="fa fa-linkedin"></i></a>
+                </h1></p>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="rou">
+      <div class="col-sm-4">
+        <div class="containerTeam">
+          <div id="card">
+            <figure class="front" style="background-image: url('img/team/Dilip.jpg');"></figure>
+            <figure class="back">
+              <p class="text textTeam">Dilip Kumar Sharma<br>CSE 2nd year<br>
+                <h1><a href="www.facebook.com/DilipCoder" target="_blank" style="color:white;margin:10px;"><i class="fa fa-facebook "></i></a>
+                <a href="www.linkedin.com/in/dilipcoder" target="_blank" style="margin:10px;color: white;"><i class="fa fa-linkedin "></i></a>
+                </h1></p>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="containerTeam">
+          <div id="card">
+            <figure class="front" style="background-image: url('img/team/Rishabh.jpg');"></figure>
+            <figure class="back">
+              <p class="text textTeam">Rishabh<br>CSE 1st year<br>
+                <h1><a href="https://m.facebook.com/rishabh.chauhan.773124?ref=bookmarks
+" target="_blank" style="color:white;margin:10px;"><i class="fa fa-facebook"></i></a>
+                <a href=" https://www.linkedin.com/in/rishabh-chauhan-chd-in" target="_blank" style="margin:10px;color: white;"><i class="fa fa-linkedin"></i></a>
+                </h1></p>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="containerTeam">
+          <div id="card">
+            <figure class="front" style="background-image: url('img/team/Deepak.jpg');"></figure>
+            <figure class="back">
+              <p class="text textTeam">Deepak<br>CSE 1st year<br>
+                <h1><a href="https://m.facebook.com/deepakcodefreak" target="_blank" style="color:white;margin:10px;"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/deepakcodefreak" target="_blank" style="margin:10px;color: white;"><i class="fa fa-linkedin"></i></a>
+                </h1></p>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row" id="rou">
+      <div class="col-sm-4">
+        <div class="containerTeam">
+          <div id="card">
+            <figure class="front" style="background-image: url('img/team/Deeksha.jpg');"></figure>
+            <figure class="back">
+              <p class="text textTeam">Deeksha<br>CSE 1st year<br>
+                <h1><a href="https://www.facebook.com/DeekshaKodieur" target="_blank" style="color:white;margin:10px;"><i class="fa fa-facebook"></i></a>
+                <a href=" https://www.linkedin.com/in/deeksha-gupta-422494152/" target="_blank" style="margin:10px;color: white;"><i class="fa fa-linkedin"></i></a>
+                </h1></p>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="containerTeam">
+          <div id="card">
+            <figure class="front" style="background-image: url('img/team/Vancha.jpg');"></figure>
+            <figure class="back">
+              <p class="text textTeam">Vancha<br>CSE 1st year<br>
+                <h1><a href="https://www.facebook.com/vanchha.omar.3" target="_blank" style="color:white;margin:10px;"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/vancha-omer-4a1494152/" target="_blank" style="margin:10px;color: white;"><i class="fa fa-linkedin"></i></a>
+                </h1></p>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="containerTeam">
+          <div id="card">
+            <figure class="front" style="background-image: url('img/team/Prerana.jpg');"></figure>
+            <figure class="back">
+              <p class="text textTeam">Prerana<br>CSE 1st year<br>
+                <h1><a href="https://www.facebook.com/prerna.pundir.963=Facebook" target="_blank" style="color:white;margin:10px;"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/prerna-pundir-9b6493152/=Linkedin" target="_blank" style="margin:10px;color: white;"><i class="fa fa-linkedin"></i></a>
+                </h1></p>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

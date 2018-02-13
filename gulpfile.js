@@ -216,11 +216,11 @@ gulp.task('nunjucks', function() {
 gulp.task('watch', function() {
   gulp.watch(bases.app + 'scss/**/*.scss', ['styles']);
   gulp.watch(bases.app + '/**/*.+(html|nunjucks)', ['nunjucks']);
-  gulp.watch(bases.app + 'img/*', ['imagemin']);
+  gulp.watch(bases.app + 'img/**/*', ['imagemin']);
 });
 
 gulp.task('imagemin', function() {
-  return gulp.src(bases.app + 'img/*')
+  return gulp.src(bases.app + 'img/**/*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],

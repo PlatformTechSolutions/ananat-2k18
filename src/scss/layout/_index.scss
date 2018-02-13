@@ -94,6 +94,9 @@ section{
 .section-event-page{
   @include background-image("../img/technical.gif");
 }
+.section-webTeam{
+  @include background-image("../img/teamBackground.jpg");
+}
 /***********************
 navbar
 **********************/
@@ -566,5 +569,13 @@ Events
   /* opacity: 0.5; */
 }
 #QuizzitchPage{
-  @include background-image("../img/quizzitch_page.png ");
+  @include background-image("../img/quizzitch_page.jpg ");
+}
+
+#botPull{
+  @include background-image("../img/botPull.jpg");
+  /* opacity: 0.5; */
+}
+#botPullPage{
+  @include background-image("../img/botPull_page.jpg ");
 }
